@@ -26,7 +26,7 @@ const Layout = ({ location, title, children }) => {
       <main>{children}</main>
       <footer>
         © {new Date().getFullYear()}, Built with
-        {` `} Gatsby</a>
+        {` `} Gatsby
       </footer>
     </div>
   )
