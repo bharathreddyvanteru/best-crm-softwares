@@ -25,40 +25,12 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
-      <Bio />
-      <ol style={{ listStyle: `none` }}>
-        {posts.map(post => {
-          const title = post.frontmatter.title || post.fields.slug
+      <SEO title="Best crm softwares" />
+      <h1> What are the best CRM softwares ? </h1>
+      <p> Tired of figuring out best crm softwares, check this 
+  <a className="text-4xl font-bold text-yellow-600 font-display" href= "https://techcentred.com/top-5-best-crm-software-for-every-business/"> best crm softwares</a> 
+  list curated by  <a href="https://techcentred.com">TechCentred</a>
 
-          return (
-            <li key={post.fields.slug}>
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <header>
-                  <h2>
-                    <Link to={post.fields.slug} itemProp="url">
-                      <span itemProp="headline">{title}</span>
-                    </Link>
-                  </h2>
-                  <small>{post.frontmatter.date}</small>
-                </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
-                    }}
-                    itemProp="description"
-                  />
-                </section>
-              </article>
-            </li>
-          )
-        })}
-      </ol>
     </Layout>
   )
 }
